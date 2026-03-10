@@ -1,0 +1,944 @@
+/* ============================================
+   ENGAGEMENT INVITATION - RESPONSIVE STYLES
+   ============================================ */
+
+/* CSS Variables */
+:root {
+    --primary-color: #ffc400;
+    --primary-dark: #d4a300;
+    --text-dark: #2c2c2c;
+    --text-gold: #b8860b;
+    --bg-cream: #fffbe9;
+    --bg-gold: #ffc400;
+    --white: #ffffff;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+html {
+    scroll-behavior: smooth !important;
+}
+
+/* Body Styles */
+body {
+    background: var(--bg-cream);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    transition: opacity ease-in 0.2s;
+}
+
+/* ============================================
+   MAIN INVITATION SECTION
+   ============================================ */
+.main-invite {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: visible;
+    /* To adjust gap below this section: change the 3rd padding value (bottom). 0px = no gap, 30px = original */
+    padding: 50px 20px 0px 20px;
+    perspective: 1000px;
+    background: var(--bg-cream);
+}
+
+.invite-bg-text {
+    text-align: center;
+    z-index: 2;
+    padding: 0 15px;
+    max-width: 100%;
+}
+
+/* Title - ENGAGEMENT CEREMONY */
+.invite-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.2rem, 4.5vw, 2.8rem);
+    font-weight: 800;
+    color: var(--text-gold);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    white-space: nowrap;
+    /* Keeps the title on a single line on all screens */
+}
+
+/* Names - Sai Ram & Shravani */
+.invite-names {
+
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 700;
+    color: var(--text-gold);
+    /* To adjust gap below names: change margin-bottom (e.g., 5px = less gap, 25px = more gap) */
+    margin-bottom: 5px;
+    line-height: 1.2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Date */
+.invite-date {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+/* Venue */
+.invite-venue {
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
+    font-weight: 400;
+    color: var(--text-dark);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    padding: 0 10px;
+    line-height: 1.5;
+}
+
+/* Couple Image */
+.parallax-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    z-index: 1;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* ============================================
+   DETAILS SECTION - You're Invited
+   ============================================ */
+.details-section {
+    width: 100%;
+    /* To adjust gap above "You're Invited": change the first padding value (e.g., 5px = less gap, 30px = more gap) */
+    padding: 5px 20px 40px 20px;
+    background: var(--bg-cream);
+    text-align: center;
+}
+
+.details-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.details-content h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    color: var(--text-gold);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.details-content p {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.invite-highlight {
+    font-family: 'Playfair Display', serif !important;
+    font-size: clamp(1rem, 3vw, 1.25rem) !important;
+    color: var(--text-gold) !important;
+    font-weight: 700;
+    margin-bottom: 18px !important;
+}
+
+/* ============================================
+   DATE SECTION
+   ============================================ */
+.date-section {
+    width: 100%;
+    padding: 30px 20px;
+    background: var(--bg-cream);
+    text-align: center;
+}
+
+.date-section .invite-date {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    padding: 18px 30px;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(255, 196, 0, 0.3);
+    color: var(--white);
+}
+
+/* ============================================
+   IMAGE SECTION
+   ============================================ */
+.image-section {
+    width: 100%;
+    padding: 10px 20px;
+    background: var(--bg-cream);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============================================
+   NAMES SECTION
+   ============================================ */
+.names-section {
+    width: 100%;
+    padding: 20px 20px 5px 20px;
+    background: var(--bg-cream);
+    text-align: center;
+}
+
+.couple-names {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    font-weight: 700;
+    color: var(--text-gold);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    line-height: 1.3;
+    white-space: nowrap;
+    /* Keeps the names on a single line on all screens */
+}
+
+.invite-time {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-weight: 600;
+    color: var(--text-gold);
+    letter-spacing: 2px;
+    margin-top: 12px;
+}
+
+/* ============================================
+   VENUE SECTION
+   ============================================ */
+.venue-section {
+    width: 100%;
+    padding: 30px 20px 40px 20px;
+    background: var(--bg-cream);
+    text-align: center;
+}
+
+.venue-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    font-weight: 700;
+    color: var(--text-gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.venue-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.venue-address {
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(0.75rem, 2.5vw, 1rem);
+    font-weight: 400;
+    color: #666;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   MAP SECTION - Venue Location
+   ============================================ */
+.map-container {
+    width: 100%;
+    padding: 40px 20px 50px 20px;
+    background: var(--bg-cream);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.map-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+    font-weight: 700;
+    color: var(--text-gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.map-frame {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: var(--white);
+}
+
+.map-frame iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    display: block;
+}
+
+/* Transparent overlay to capture clicks on the iframe */
+.map-click-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 10;
+    background: transparent;
+}
+
+/* ============================================
+   CONTACT SECTION
+   ============================================ */
+.contact-section {
+    width: 100%;
+    padding: 40px 20px;
+    background: var(--bg-gold);
+    text-align: center;
+}
+
+.contact-section .container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-section .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    min-width: 140px;
+}
+
+.whatsapp-btn {
+    background: #25D366;
+    color: var(--white);
+}
+
+.whatsapp-btn:hover {
+    background: #1da851;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.call-btn {
+    background: #2196F3;
+    color: var(--white);
+}
+
+.call-btn:hover {
+    background: #1976D2;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.contact-label {
+    font-weight: 500;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Large tablets and small desktops */
+@media (max-width: 992px) {
+    .main-invite {
+        padding: 35px 15px 0px 15px;
+    }
+
+    .parallax-image {
+        max-width: 350px;
+    }
+
+    .map-frame iframe {
+        height: 320px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .main-invite {
+        padding: 30px 10px 0px 10px;
+        min-height: auto;
+    }
+
+    .invite-title {
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        font-size: clamp(1.1rem, 3.8vw, 1.8rem);
+    }
+
+    .invite-names {
+        margin-bottom: 5px;
+        font-size: clamp(1.8rem, 7vw, 3rem);
+    }
+
+    .invite-date {
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .invite-venue {
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+    }
+
+    .parallax-image {
+        max-width: 320px;
+    }
+
+    .details-section {
+        padding: 5px 15px 35px 15px;
+    }
+
+    .details-content h2 {
+        margin-bottom: 15px;
+    }
+
+    .map-container {
+        padding: 30px 15px 40px 15px;
+    }
+
+    .map-frame iframe {
+        height: 300px;
+    }
+
+    .contact-section {
+        padding: 35px 15px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+    .main-invite {
+        padding: 25px 8px 0px 8px;
+    }
+
+    .invite-title {
+        letter-spacing: 1.5px;
+        margin-bottom: 8px;
+        /* HOW TO ADJUST: Change the middle value (4vw) to increase/decrease size.
+           Bigger number = bigger text. e.g., 5vw = larger, 3vw = smaller.
+           The 1st value (1.1rem) is the minimum size, 3rd value (1.7rem) is the maximum. */
+        font-size: clamp(1.8rem, 6vw, 3rem);
+    }
+
+    .invite-names {
+        margin-bottom: 5px;
+        font-size: clamp(1.6rem, 6.5vw, 2.5rem);
+    }
+
+    .invite-date {
+        letter-spacing: 1.5px;
+        margin-bottom: 8px;
+    }
+
+    .invite-venue {
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        font-size: 0.8rem;
+    }
+
+    .parallax-image {
+        max-width: 280px;
+        margin-top: 15px;
+    }
+
+    .details-section {
+        padding: 5px 12px 30px 12px;
+    }
+
+    .details-content h2 {
+        margin-bottom: 12px;
+        font-size: clamp(1.5rem, 5.5vw, 2rem);
+    }
+
+    .details-content p {
+        line-height: 1.7;
+        font-size: clamp(0.85rem, 2.5vw, 1rem);
+    }
+
+    .date-section {
+        padding: 20px 12px;
+    }
+
+    .date-section .invite-date {
+        font-size: clamp(1rem, 3.5vw, 1.4rem);
+        padding: 14px 24px;
+        letter-spacing: 2px;
+    }
+
+    .image-section {
+        padding: 20px 12px;
+    }
+
+    .venue-section {
+        padding: 25px 12px 35px 12px;
+    }
+
+    .venue-heading {
+        font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+    }
+
+    .venue-name {
+        font-size: clamp(0.95rem, 3vw, 1.3rem);
+    }
+
+    .venue-address {
+        font-size: clamp(0.7rem, 2.2vw, 0.9rem);
+        letter-spacing: 1px;
+        padding: 0 5px;
+    }
+
+    .map-container {
+        padding: 25px 12px 35px 12px;
+    }
+
+    .map-title {
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+        font-size: clamp(1rem, 3.5vw, 1.4rem);
+    }
+
+    .map-frame {
+        border-radius: 10px;
+    }
+
+    .map-frame iframe {
+        height: 280px;
+    }
+
+    .contact-section {
+        padding: 30px 12px;
+    }
+
+    .contact-section .section-title {
+        font-size: clamp(1.2rem, 4.5vw, 1.8rem);
+        margin-bottom: 20px;
+    }
+
+    .contact-buttons {
+        gap: 12px;
+    }
+
+    .contact-btn {
+        padding: 10px 22px;
+        font-size: 0.9rem;
+        min-width: 125px;
+    }
+}
+
+/* Small mobile phones (375px and below) */
+@media (max-width: 400px) {
+    .main-invite {
+        padding: 20px 6px 0px 6px;
+    }
+
+    .invite-title {
+        letter-spacing: 1px;
+        /* HOW TO ADJUST: Change the middle value (3.6vw) to increase/decrease size.
+           e.g., 4vw = larger, 3vw = smaller. */
+        font-size: clamp(0.9rem, 3.6vw, 1.4rem);
+        margin-bottom: 6px;
+    }
+
+    .invite-names {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin-bottom: 3px;
+    }
+
+    .details-section {
+        padding: 3px 10px 25px 10px;
+    }
+
+    .details-content h2 {
+        font-size: clamp(1.3rem, 5vw, 1.6rem);
+        margin-bottom: 10px;
+    }
+
+    .details-content p {
+        font-size: clamp(0.8rem, 2.3vw, 0.9rem);
+        line-height: 1.6;
+    }
+
+    .invite-highlight {
+        font-size: clamp(0.85rem, 2.8vw, 1.05rem) !important;
+        margin-bottom: 12px !important;
+    }
+
+    .date-section {
+        padding: 15px 10px;
+    }
+
+    .date-section .invite-date {
+        font-size: clamp(0.85rem, 3.2vw, 1.2rem);
+        padding: 12px 20px;
+        letter-spacing: 1.5px;
+        border-radius: 10px;
+    }
+
+    .image-section {
+        padding: 15px 10px;
+    }
+
+    .parallax-image {
+        max-width: 250px;
+    }
+
+    .venue-section {
+        padding: 20px 10px 30px 10px;
+    }
+
+    .venue-heading {
+        font-size: clamp(1rem, 3.2vw, 1.3rem);
+        letter-spacing: 1.5px;
+        margin-bottom: 10px;
+    }
+
+    .venue-name {
+        font-size: clamp(0.85rem, 2.8vw, 1.1rem);
+        margin-bottom: 8px;
+    }
+
+    .venue-address {
+        font-size: clamp(0.65rem, 2vw, 0.8rem);
+        letter-spacing: 0.5px;
+    }
+
+    .map-container {
+        padding: 20px 10px 30px 10px;
+    }
+
+    .map-title {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        letter-spacing: 1.5px;
+        margin-bottom: 15px;
+    }
+
+    .map-frame iframe {
+        height: 250px;
+    }
+
+    .contact-section {
+        padding: 25px 10px;
+    }
+
+    .contact-section .section-title {
+        font-size: clamp(1.1rem, 4vw, 1.4rem);
+        margin-bottom: 18px;
+    }
+
+    .contact-buttons {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .contact-btn {
+        padding: 9px 18px;
+        font-size: 0.85rem;
+        min-width: 115px;
+    }
+
+    .contact-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Extra small devices (320px and below) */
+@media (max-width: 320px) {
+    .main-invite {
+        padding: 15px 5px 0px 5px;
+    }
+
+    .invite-title {
+        /* HOW TO ADJUST: Change the middle value (3.2vw) to increase/decrease size.
+           e.g., 3.5vw = larger, 2.5vw = smaller. */
+        font-size: clamp(0.8rem, 3.2vw, 1.1rem);
+        letter-spacing: 0.5px;
+        margin-bottom: 5px;
+    }
+
+    .invite-names {
+        font-size: clamp(1.3rem, 5.5vw, 1.7rem);
+        margin-bottom: 2px;
+    }
+
+    .details-section {
+        padding: 2px 8px 20px 8px;
+    }
+
+    .details-content h2 {
+        font-size: clamp(1.2rem, 4.5vw, 1.5rem);
+    }
+
+    .details-content p {
+        font-size: 0.78rem;
+    }
+
+    .invite-highlight {
+        font-size: 0.8rem !important;
+    }
+
+    .date-section .invite-date {
+        font-size: 0.8rem;
+        padding: 10px 16px;
+        letter-spacing: 1px;
+    }
+
+    .parallax-image {
+        max-width: 200px;
+    }
+
+    .venue-heading {
+        font-size: 0.95rem;
+    }
+
+    .venue-name {
+        font-size: 0.8rem;
+    }
+
+    .venue-address {
+        font-size: 0.6rem;
+    }
+
+    .map-frame iframe {
+        height: 220px;
+    }
+
+    .contact-btn {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+        min-width: 100px;
+        gap: 6px;
+    }
+
+    .contact-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .contact-section .section-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* ============================================
+   ANIMATIONS & EFFECTS
+   ============================================ */
+
+/* Fade in from bottom */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade in from top */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade in with scale */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Gentle glow pulse for title */
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        text-shadow: 0 0 5px rgba(184, 134, 11, 0.3);
+    }
+
+    50% {
+        text-shadow: 0 0 20px rgba(184, 134, 11, 0.6), 0 0 40px rgba(255, 196, 0, 0.3);
+    }
+}
+
+/* --- Apply animations with staggered delays --- */
+
+/* 1. Title - slides down */
+.invite-title {
+    animation: fadeInDown 1s ease-out both;
+}
+
+/* 2. "You're Invited" section - fades up with delay */
+.details-section {
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* 3. Highlight text - slides in from left */
+.invite-highlight {
+    animation: slideInLeft 0.8s ease-out 0.6s both;
+}
+
+/* 4. Date badge - pops in with scale */
+.date-section .invite-date {
+    animation: fadeInScale 0.8s ease-out 0.8s both;
+}
+
+/* 5. Couple names - fades up */
+.couple-names {
+    animation: fadeInUp 1s ease-out 1s both;
+}
+
+/* 6. Couple image - fades up */
+.parallax-image {
+    animation: fadeInUp 1.2s ease-out 1.2s both;
+}
+
+/* 7. Venue section - fades up */
+.venue-section {
+    animation: fadeInUp 0.8s ease-out 1.4s both;
+}
+
+/* 8. Map section - fades up */
+.map-container {
+    animation: fadeInUp 0.8s ease-out 1.6s both;
+}
+
+/* 9. Contact section - fades up */
+.contact-section {
+    animation: fadeInUp 0.8s ease-out 1.8s both;
+}
+
+/* 10. Title glow effect after entrance */
+.invite-title {
+    animation: fadeInDown 1s ease-out both, glowPulse 3s ease-in-out 2s infinite;
+}
+
+/* Smooth hover effects */
+.map-container:hover .map-frame {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Focus states for accessibility */
+.contact-btn:focus {
+    outline: 3px solid var(--white);
+    outline-offset: 3px;
+}
+
+/* Print styles */
+@media print {
+    .contact-section {
+        background: #f0f0f0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
