@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const mapContainer = document.querySelector('.map-container');
     if (mapContainer) {
         mapContainer.addEventListener('click', function() {
-            window.open('https://maps.app.goo.gl/mYGPW8bNRqucYPtt5', '_blank');
+            window.open('https://www.google.com/maps/search/Ganesh+Vidya+Mandir+High+School+Dharavi+Mumbai+400017', '_blank');
         });
     }
 }); 
