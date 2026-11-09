@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ===== COUNTDOWN TIMER =====
-    // Target: 14 November 2026, 6:00 PM IST (UTC+5:30)
-    const engagementDate = new Date('2026-11-14T19:00:00+05:30');
+    // Target: 14 November 2026, 5:00 PM IST (UTC+5:30)
+    const engagementDate = new Date('2026-11-14T17:00:00+05:30');
 
     const daysEl = document.getElementById('countdown-days');
     const hoursEl = document.getElementById('countdown-hours');
